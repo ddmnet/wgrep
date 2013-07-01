@@ -52,10 +52,15 @@ Now you should have a working wgrep command.
 ## Options
 
  - `-h, --help`: Prints out the help message.
+
  - `-V, --version`: Prints out the version number.
+
  - `-u, --user <username>`: Allows you to provide a username for basic auth.
+
  - `-p, --password [password]`: Allows you to provide a password for basic auth. Will ask for one if it's not provided.
+
  - `-q, --query <query>`: Allows you to provide a query selector string to run against the resource.
+
  - `-m, --markdown`: Returns results in a (best-guess) Markdown format.
 
     This works really nicely with links and images:
@@ -64,8 +69,11 @@ Now you should have a working wgrep command.
         wgrep -mq "img" http://google.com
 
  - `-i, --ordered`: With `-m`, returns results as an ordered list.
+
  - `-l, --list`: With `-m`, returns results as an unordered list.
+
  - `-j, --json`: Returns results as a JSON string.
+ 
  - `-n, --inspect`: With -j, inspects the JSON results, with a default depth of 2 and colorized output.
 
 ## Credits
