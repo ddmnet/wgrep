@@ -5,7 +5,7 @@ resources.
 
 ## Examples
 
-```Shell
+```sh
 wgrep -q "a" http://google.com
 ```
 
@@ -14,7 +14,7 @@ are linked to.
 
 If you want only the `a` tags that have an href:
 
-```Shell
+```sh
 wgrep -q "a[href]" http://google.com
 ```
 
@@ -23,7 +23,7 @@ resources.
 
 But what if you've got a JSON url?
 
-```Shell
+```sh
 wgrep -miq "$.feed.entry[*].title[*].$t" "https://gdata.youtube.com/feeds/api/videos?q=cats&v=2&alt=json"
 ```
 
@@ -38,7 +38,7 @@ operations.
 `wgrep` is your standard command line utility. As such, you run it basically
 with:
 
-```Shell
+```sh
 wgrep [options] <url>
 ```
 
@@ -49,7 +49,7 @@ stdin inputs as well).
 
 We're working on an npm & homebrew package, but to get started with it now:
 
-```Shell
+```sh
 wget <link to wgrep.js> # wgrep.js somewhere you'd like to store it.
 chmod +x wgrep.js # make it executable
 brew install node # if you don't already have node
@@ -74,7 +74,7 @@ Now you should have a working wgrep command.
  - `-m, --markdown`: Returns results in a (best-guess) Markdown format.
 
     This works really nicely with links and images:
-    ```Shell
+    ```sh
     wgrep -mq "a[href]" http://google.com
     wgrep -mq "img" http://google.com
     ```
