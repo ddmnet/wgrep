@@ -10,11 +10,11 @@ resources.
 This example will return a tab-delimited list of link text and resources they
 are linked to.
 
-If you want only the a tags that have an href:
+If you want only the `a` tags that have an href:
 
     wgrep -q "a[href]" http://google.com
 
-The q flag accepts a css selector for text/html (and XML/XHTML) MIME'd
+The `q` flag accepts a css selector for `text/html` (and XML/XHTML) MIME'd
 resources.
 
 But what if you've got a JSON url?
@@ -34,7 +34,7 @@ with:
 
     wgrep [options] <url>
 
-A URL is required (although we are definitely thinking about adding file and 
+An HTTP URL is required (although we are definitely thinking about adding file and 
 stdin inputs as well).
 
 ## Install
@@ -65,4 +65,14 @@ Now you should have a working wgrep command.
 ## Credits
 
 Written by [Paul DeLeeuw](http://twitter.com/pauld) for debugging URLs and
-other HTTP-based shenanigans. 
+other HTTP-based shenanigans.
+
+Written in Javascript, runs in [node](http://nodejs.org).
+Makes use of several awesome open source projects, like
+ - [cheerio](https://github.com/MatthewMueller/cheerio)
+ - [commander](https://github.com/visionmedia/commander.js/)
+ - [JSONPath](http://goessner.net/articles/JsonPath/)
+ - [request](https://github.com/mikeal/request)
+ - [underscore](http://underscorejs.org)
+
+Thanks to all the contributors of these fine projects.
