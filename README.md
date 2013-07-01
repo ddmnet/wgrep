@@ -50,10 +50,10 @@ stdin inputs as well).
 We're working on an npm & homebrew package, but to get started with it now:
 
 ```sh
-wget <link to wgrep.js> # wgrep.js somewhere you'd like to store it.
+wget <link to wgrep.js> # wget it somewhere you'd like to store it.
 chmod +x wgrep.js # make it executable
 brew install node # if you don't already have node
-npm install cheerio commander JSONPath request underscore # install node dependencies
+npm install cheerio commander JSONPath request underscore # install wgrep dependencies
 ln -s <absolute path to>/wgrep.js /usr/local/bin/wgrep # link it somewhere in your $PATH
 ```
 
@@ -78,7 +78,7 @@ Now you should have a working wgrep command.
     wgrep -mq "a[href]" http://google.com
     wgrep -mq "img" http://google.com
     ```
-    
+
  - `-i, --ordered`: With `-m`, returns results as an ordered list.
 
  - `-l, --list`: With `-m`, returns results as an unordered list.
