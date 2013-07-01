@@ -57,6 +57,12 @@ Now you should have a working wgrep command.
  - `-p, --password [password]`: Allows you to provide a password for basic auth. Will ask for one if it's not provided.
  - `-q, --query <query>`: Allows you to provide a query selector string to run against the resource.
  - `-m, --markdown`: Returns results in a (best-guess) Markdown format.
+
+    This works really nicely with links and images:
+
+        wgrep -mq "a[href]" http://google.com
+        wgrep -mq "img" http://google.com
+
  - `-i, --ordered`: With `-m`, returns results as an ordered list.
  - `-l, --list`: With `-m`, returns results as an unordered list.
  - `-j, --json`: Returns results as a JSON string.
