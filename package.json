@@ -1,0 +1,41 @@
+{
+    "name": "wgrep",
+    "preferGlobal": true,
+    "version": "0.1.0",
+    "author": {
+        "name": "Paul DeLeeuw",
+        "email": "pauld@teamddm.com",
+        "url": "http://padizio.com"
+    },
+    "homepage": "https://github.com/ddmnet/wgrep",
+    "description": "a command line tool for grepping html using selectors or json using jsonpath",
+    "bin": {
+        "wgrep": "./wgrep.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ddmnet/wgrep.git"
+    },
+    "keywords": [
+        "grep",
+        "cli",
+        "html",
+        "json",
+        "jsonpath"
+    ],
+    "bugs":{
+        "url" : "https://github.com/ddmnet/wgrep/issues"
+    },
+    "dependencies": {
+        "cheerio": "~0.12.0",
+        "commander": "~1.2.0",
+        "jquery": "~1.8.3",
+        "JSONPath": "~0.9.1",
+        "request": "~2.21.0",
+        "underscore": "~1.4.4"
+    },
+    "license": "MIT",
+    "engines": {
+        "node": ">=0.8"
+    }
+}
