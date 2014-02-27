@@ -14,7 +14,7 @@
 var cheerio = require('cheerio'),
     request = require('request'),
     prg = require('commander'),
-    jsonpath = require('jsonpath'),
+    jsonpath = require('JSONPath'),
     _ = require('underscore'),
     inspect = require('util').inspect,
     html = '',
