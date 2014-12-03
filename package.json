@@ -1,7 +1,7 @@
 {
     "name": "wgrep",
     "preferGlobal": true,
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": {
         "name": "Paul DeLeeuw",
         "email": "pauld@teamddm.com",
@@ -32,7 +32,8 @@
         "jquery": "~1.8.3",
         "JSONPath": "~0.9.1",
         "request": "~2.21.0",
-        "underscore": "~1.4.4"
+        "underscore": "~1.4.4",
+        "mime":"~1.2.11"
     },
     "license": "MIT",
     "engines": {

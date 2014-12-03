@@ -17,6 +17,8 @@ var cheerio = require('cheerio'),
     jsonpath = require('JSONPath'),
     _ = require('underscore'),
     inspect = require('util').inspect,
+    mime = require('mime'),
+    fs = require('fs'),
     html = '',
     url = '',
     options = {},
@@ -225,5 +227,26 @@ if (prg.user) {
         request(options, processor);
     }
 } else {
-    request(options, processor);
+    // make sure this is an http request
+    if (options.url.match(/^https?:\/\//)) {
+        request(options, processor);
+    } else {
+        fs.readFile(url, function(err, data) {
+            var response = {
+                "headers": {
+                    "content-type": mime.lookup(url)
+                },
+                "request": {
+                    "uri": {
+                        "href": null
+                    }
+                },
+                "statusCode": 200
+            };
+            if (err) {
+                response.statusCode = 404;
+            }
+            processor(err, response, data);
+        });
+    }
 }
